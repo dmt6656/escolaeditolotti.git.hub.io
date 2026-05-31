@@ -675,7 +675,7 @@ figcaption {
 }
 
 .button2:hover .text-block-8 {
-  color: var(--color-1); /* Substitua pela cor que você desejar */
+  color: var(--color-1);
 }
   
 .button.ghost-bg {
@@ -1034,7 +1034,7 @@ figcaption {
   justify-content: center;
   width: 100%;
   padding-bottom: 7px;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-right: 40px;
   display: flex;
   position: fixed;
@@ -1051,6 +1051,8 @@ figcaption {
 .depoimentos,
 .contato {
   transition: all 0.2s ease;
+  padding: 0 25px 0 10px;
+  position: center;
 }
 
 .numero:hover,
@@ -1060,16 +1062,35 @@ figcaption {
 .porque-nos:hover,
 .depoimentos:hover,
 .contato:hover {
-  font-size: 15px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.numero {
-  transition: all 0.1s ease-in;
+.numero::after,
+.equipe::after,
+.sobre::after,
+.cursos::after,
+.porque-nos::after,
+.depoimentos::after,
+.contato::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  top: 28px;
+  transition: 0.5s ease;
 }
 
-.numero:hover {
-  font-size: 13px;
+.numero:hover::after,
+.equipe:hover::after,
+.sobre:hover::after,
+.cursos:hover::after,
+.porque-nos:hover::after,
+.depoimentos:hover::after,
+.contato:hover::after {
+    width: 85%;
 }
 
 
